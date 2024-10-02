@@ -21,6 +21,8 @@ Muestra un pop-up en el ángulo inferior izquierdo de la pantalla en la versión
 - Las media queries en el CSS aseguran que el pop-up se adapte a diferentes tamaños de pantalla en escritorio.
 # Estilos adicionales
 - Si deseas agregar estilos específicos para el contenido dentro del pop-up, puedes hacerlo en el archivo popup-responsivo.css o directamente en el editor de bloques al editar la página.
+# Compatibilidad
+- Al no depender de los filtros de the_content, evitamos conflictos con otros plugins que puedan modificar el contenido. Esta solución es probablemente la más efectiva y sencilla, ya que evita aplicar los filtros de the_content que pueden inyectar contenido adicional como el reproductor del plugin Seriously Simple Podcasting. Al procesar directamente los bloques con do_blocks(), obtenemos el contenido renderizado tal como se diseñó en el editor de bloques, sin interferencias de otros plugins.
 # Comportamiento del pop-up
 El pop-up se puede cerrar mediante el botón de cierre. La funcionalidad se maneja en el JavaScript.
 Consideraciones finales
