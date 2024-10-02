@@ -1,4 +1,4 @@
-# popup-alegre
+# Pop-up Alegre
 Muestra un pop-up en el ángulo inferior izquierdo de la pantalla en la versión de escritorio.
 #Explicación del CSS:
 ## Estilos básicos:
