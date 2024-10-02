@@ -1,1 +1,38 @@
+#popup-responsivo {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 400px;
+    height: 200px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    overflow: auto;
+    box-sizing: border-box;
+    padding: 30px;
+}
+
+@media screen and (max-width: 500px) {
+    #popup-responsivo {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #popup-responsivo {
+        width: 50%;
+        height: auto;
+    }
+}
+
+#popup-responsivo #cerrar-popup {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    background: none;
+    border: 1px solid #ccc;
+    font-size: 18px;
+    cursor: pointer;
+    
+}
 
