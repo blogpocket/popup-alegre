@@ -20,17 +20,23 @@ add_action( 'wp_enqueue_scripts', 'popup_responsivo_enqueue_scripts' );
 
 function popup_responsivo_mostrar_popup() {
     if ( ! wp_is_mobile() ) {
-       if ( current_user_can( 'read' ) ) {    
-           // ID de la página que contiene el contenido del pop-up
-           $pagina_id = absint( 123 ); // Asegura que el ID sea un entero positivo
-           $contenido_post = get_post( $pagina_id );
-           if ( $contenido_post ) {
-              $contenido = apply_filters( 'the_content', $contenido_post->post_content );
-              echo '<div id="popup-responsivo">';
-              echo '<button id="cerrar-popup">&times;</button>';
-              echo wp_kses_post( $contenido );
-              echo '</div>';
-           }    
+        $pagina_id = 123; // Reemplaza 123 con el ID de tu página
+
+        $contenido_post = get_post( $pagina_id );
+        if ( $contenido_post ) {
+            // Obtener el contenido sin filtros
+            $contenido = $contenido_post->post_content;
+
+            // Procesar los bloques de Gutenberg
+            $contenido = do_blocks( $contenido );
+
+            // Añadir auto párrafos
+            $contenido = wpautop( $contenido );
+
+            echo '<div id="popup-responsivo">';
+            echo '<button id="cerrar-popup">&times;</button>';
+            echo wp_kses_post( $contenido );
+            echo '</div>';
         }
     }
 }
