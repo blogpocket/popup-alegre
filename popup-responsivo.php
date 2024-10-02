@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: Popup Responsivo
+Plugin Name: Popup Alegre
 Description: Muestra un pop-up en el ángulo inferior izquierdo de la pantalla en la versión de escritorio.
 Version: 1.0
 Author: A. Cambronero Blogpocket.com
