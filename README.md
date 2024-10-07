@@ -1,6 +1,6 @@
 # Pop-up Alegre
 Muestra un pop-up en el ángulo inferior izquierdo de la pantalla en la versión de escritorio.
-#Explicación del CSS:
+# Explicación del CSS:
 ## Estilos básicos:
 - Posiciona el pop-up en el ángulo inferior izquierdo.
 - Establece un tamaño fijo de 400x200 píxeles.
